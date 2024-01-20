@@ -1,41 +1,73 @@
-# Python Projects
+# Moonlight PDF Reader
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
+Moonlight PDF Reader is a simple python tkinter based application to read pdfs with some of the advanced pdf features including :
+* PDF Encryption
+* PDF Decryption
+* Page Extraction
+* Image Extraction
+* Text Extraction
+* Page Rotation
+* PDF Export to PNG, HTML, XML
+* Split PDF 
+* Merge PDF
+* Watermarking PDF
 
-This repository contains some of the GUI based python projects made by me. Do fork it, you'll really
-love this repo. 
+![Alt text](app.png?raw=true "Moonlight PDF Reader")
 
-### All the projects are listed here
+Page zooming and navigation, opening recently opened files is also possible. Moonlight PDF Reader leverages the features of muPDF library which is available in python under pymupdf name
 
-* ## Coastline
-	> A full fledged text editor made with python & tkinter.\
-	> Link to project : [Coastline](https://github.com/pyGuru123/Python-Projects/tree/master/Coastline%20-%20Text%20Editor)
+* ### Note : In case some feature is breaking like attribute is not there, replace the attribut with new attribute which can be found here [pymupdf snake_case update](https://pymupdf.readthedocs.io/en/latest/znames.html)
 
-* ## Covid Tracker
-	> A simple covid spread visualizer made with tkintr, pandas & matplotlib.\
-	> Link to project : [Covid Tracker](https://github.com/pyGuru123/Python-Projects/tree/master/Covid%20Tracker)
+## How to Download
 
-* ## Image Cutter Cropper Resizer
-	> A simple app to divide, crop and resize images.\
-	> Link to project : [Image Cutter](https://github.com/pyGuru123/Python-Projects/tree/master/Image%20-%20CutterCropperResizer)
+Download this project from here [Download Moonlight PDF Reader](https://downgit.github.io/#/home?url=https://github.com/pyGuru123/Python-Projects/tree/master/Moonlight%20PDF%20Reader)
 
-* ## Moonlight
-	> A full fledged PDF viewer and editor with lots of advanced features made with pymupdf.\
-	> Link to project : [Moonlight](https://github.com/pyGuru123/Python-Projects/tree/master/Moonlight%20PDF%20Reader)
+## Requirements
 
-* ## Musicxy
-	> A simple music player made with tkinter & pygame.\
-	> Link to project : [Musicxy](https://github.com/pyGuru123/Python-Projects/tree/master/Musicxy%20-%20Music%20Player)
+PyMuPDF : Use the package manager [pip](https://pip.pypa.io/en/stable/) to install PyMuPDF.
 
-* ## TARS
-	> A simple virtual assistant for you.\
-	> Link to project : [TARS](https://github.com/pyGuru123/Python-Projects/tree/master/TARS%20Virtual%20Assistant)
+```bash
+pip install pymupdf
+```
 
-* ## Weatherzilla
-	> A simple weather application harnessing openweathermap api.\
-	> Link to project : [Weatherzilla](https://github.com/pyGuru123/Python-Projects/tree/master/Weatherzilla%20-%20Weather%20App)
+## Usage
 
-<br/>
-<h4 align="center"> Show ❤️ By Starring this <img align='center'  height="22" src="https://img.shields.io/badge/Repo!%F0%9F%98%8A-purple.svg?&style=for-the-badge&logoColor=green" /></h4>
+Double click the application.pyw to open the GUI application, then either click the open file button or press Ctrl + O to open and read a new pdf file. Remember Moonlight displays an image of the pdf page so editing or highlighting text is not possible
+
+List of shortcut commands
+* Ctrl O : open new pdf file
+* Ctrl + : zoom in
+* Ctrl - : zoom out
+* up, left arrow key : turn over previous page
+* right, down arrow key : turn over the next page
+* F11 : Fullscreen mode
+* Esc : Leave fullscreen
+
+Features
+
+* Text Extraction : 
+    Click save as text under Home after opening a pdf file to extract text from the currently opened page
+* Page Extraction : 
+    Click Extract page under tools to extract the current page and save as pdf
+* Extract Images : 
+    Click Extract Images under tools to extract all the images in the current page
+* Rotate Images : 
+    Click Rotate Images under tools to rotate the currently opened page or mark rotate all to rotate all the pages of the pdf and save as a new file. Rotation is only possible in 90 clockwise, 90 anticlockwise and turn up side down by 180
+* Export PDF : 
+    Click Export PDF under tools to export the current page to png / html / xml file
+* Encrypt PDF : 
+    Click Encrypt PDF under tools to encrypt the PDF by using AES 256 Encryption by entering a password and save as new PDF
+* Decrypt PDF : 
+    Click Decrypt PDF under tools to decrypt and remove the current password from the pdf and save as new PDF
+* Split PDF : 
+    Click Split PDF under tools to split the pdf from the entered vale of from page upto entered value of to page. Remember pages under split are zero based. So to split page 2-4 enter the value of from = 1 and value of to = 3
+* Merge PDF : 
+    Click Merge PDF under tools to merge the entered pages into a new selected pdf file. Remember page index here begins with zero too, also these pages will be inserted at the end of the selected PDF file
+* Watermark PDF : 
+    Click Watermark PDF under tools to watermark selected png or jpg file to the current pdf page. Enter the top left and bottom right coordinates of rectangle to insert the selected image inside the rectangle.
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
